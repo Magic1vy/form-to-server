@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const formRoutes = require('./formRoutes');
 const cors = require('cors');
 
+require("dotenv").config();
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname));

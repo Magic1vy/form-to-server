@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb+srv://valeriiacode:oGhRH1992pIpbSRE@cluster0.fincetk.mongodb.net/?retryWrites=true&w=majority")
-
 
 const messageSchema = {
     name: String,
