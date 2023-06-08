@@ -16,6 +16,9 @@ app.use('/', formRoutes);
 app.use(express.json())
 app.use(cors())
 
-app.listen(8000, () => {
-    console.log("Running on PORT 8000")
+const PORT = "https://forms-eefi.onrender.com" || process.env.port;
+
+
+app.listen(PORT, () => {
+    console.log(`Running on PORT ${PORT}`)
 })
