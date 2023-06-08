@@ -13,10 +13,16 @@ app.use(express.static(__dirname));
 
 app.use('/', formRoutes);
 
+const PORT = 8000 || process.env.port;
+
 app.use(express.json())
 app.use(cors())
 
-const PORT = 8000 || process.env.port;
+
+mongoose
+    .connect(process.env.MONGODB_LINK)
+    .then ( () => console.log ("Connected to MongoDB"))
+    .catch((err) => console.log(err))
 
 
 app.listen(PORT, () => {
