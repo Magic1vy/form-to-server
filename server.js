@@ -16,7 +16,7 @@ app.use('/', formRoutes);
 app.use(express.json())
 app.use(cors())
 
-const PORT = "https://forms-eefi.onrender.com" || process.env.port;
+const PORT = 8000 || process.env.port;
 
 
 app.listen(PORT, () => {
